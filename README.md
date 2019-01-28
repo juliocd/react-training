@@ -66,3 +66,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Include JSCode inside JSX
+{
+    this.state.showPersons ?
+    <div>
+    <Person 
+    name={this.state.persons[0].name} 
+    age={this.state.persons[0].age}
+    click={this.switchNameHandler.bind(this, 'Carlos')}/>
+    <Person 
+    name={this.state.persons[1].name} 
+    age={this.state.persons[1].age}
+    changed={this.nameChangedHandler}>My hobbies is run</Person>
+    <Person 
+    name={this.state.persons[2].name} 
+    age={this.state.persons[2].age}/>
+    </div> : null
+}
+
